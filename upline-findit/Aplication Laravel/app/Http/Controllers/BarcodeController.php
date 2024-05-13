@@ -99,7 +99,7 @@ class BarcodeController extends Controller
                 $patiFileName = time() . '.' . $pati->getClientOriginalExtension();
                 $pati->move(public_path('images'), $patiFileName);
                 $patiPath = public_path('images') . '/' . $patiFileName;
-                $response = Http::get('http://localhost:5000/fokuspoin?imgpat=' . $patiPath);
+                $response = Http::get('http://47.245.121.87/fokuspoin?imgpat=' . $patiPath);
                 $barcode = $response->json();
                 $defied = DB::table('dfoods')->where('barcode', 'like', $barcode . '%')->first();
                 $trackpase = Trackpase::create([

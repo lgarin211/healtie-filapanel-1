@@ -173,7 +173,8 @@ class UshController extends Controller
         $Datauser->Detail = DB::table('Member')->where('id', session('user_id'))->first();
         $Datauser->Detail->goals = DB::table('ushes')->where('id', session('user_id'))->first()->tujuan;
         try {
-            $url = 'http://localhost:5000/predict?sex=' . $Datauser->gender . '&age=' . $Datauser->tanggal_lahir . '&height=' . $Datauser->height . '&weight=' . $Datauser->weight . '&hypertension=' . $Datauser->Hypotermia . '&diabetes=' . $Datauser->Diabetes . '&goal=' . $Datauser->goals;
+
+            $url = 'http://47.245.121.87/predict?sex=' . $Datauser->gender . '&age=' . $Datauser->tanggal_lahir . '&height=' . $Datauser->height . '&weight=' . $Datauser->weight . '&hypertension=' . $Datauser->Hypotermia . '&diabetes=' . $Datauser->Diabetes . '&goal=' . $Datauser->goals;
             $response = Http::get($url);
             $flaskrespon = $response->json();
 
