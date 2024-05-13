@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>/edit_profile.html</loc>
+    </url>
+    <url>
+        <loc>/goals.html</loc>
+    </url>
+    <url>
+        <loc>/healthy_food.html</loc>
+    </url>
+    <url>
+        <loc>/home.html</loc>
+    </url>
+    <url>
+        <loc>/</loc>
+    </url>
+    <url>
+        <loc>/inputmeals.html</loc>
+    </url>
+    <url>
+        <loc>/login.html</loc>
+    </url>
+    <url>
+        <loc>/meal_info.html</loc>
+    </url>
+    <url>
+        <loc>/notification.html</loc>
+    </url>
+    <url>
+        <loc>/profile.html</loc>
+    </url>
+    <url>
+        <loc>/recipe.html</loc>
+    </url>
+    <url>
+        <loc>/recommendation.html</loc>
+    </url>
+    <url>
+        <loc>/signup.html</loc>
+    </url>
+    <url>
+        <loc>/template.html</loc>
+    </url>
+</urlset>

