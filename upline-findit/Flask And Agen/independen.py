@@ -41,14 +41,14 @@ def BarcodeReader(image):
             datatext="Barcode Not Detected or your barcode is blank/corrupted!"
         else:
             for barcode in detectedBarcodes:
-                (x, y, w, h) = barcode.rect
-                cv2.rectangle(img, (x-10, y-10),
-                            (x + w+10, y + h+10),
-                            (255, 0, 0), 2)
+                # (x, y, w, h) = barcode.rect
+                # cv2.rectangle(img, (x-10, y-10),
+                #             (x + w+10, y + h+10),
+                #             (255, 0, 0), 2)
                 if barcode.data!="":
                     datatext=str(barcode.data)
 
-        cv2.imshow("Image", img)
+        # cv2.imshow("Image", img)
         return datatext
     except Exception as e:
         return [{"error": str(e)}]
