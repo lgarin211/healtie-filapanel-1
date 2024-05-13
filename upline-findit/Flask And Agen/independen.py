@@ -5,16 +5,18 @@ import pandas as pd
 from flask import Flask, request, jsonify
 import cv2
 from pyzbar.pyzbar import decode
+import os
+import requests
 
 app = Flask(__name__)
 
-# Load the model from file request.args.get('imgpat')
 with open('rfc_model.pkl', 'rb') as file:
     R1 = pickle.load(file)
 
 def download_image(image_url):
     try:
         response = requests.get(image_url)
+        print(image_url)
         if response.status_code == 200:
             file_extension = image_url.split('.')[-1]
             unique_filename = f"{os.urandom(8).hex()}.{file_extension}"
@@ -24,6 +26,9 @@ def download_image(image_url):
         else:
             return None
     except Exception as e:
+        print("error")
+        print(e)
+        print(image_url)
         return None
 
 
@@ -52,6 +57,7 @@ def BarcodeReader(image):
 def Detecran():
     image = download_image(request.args.get('imgpat'))
     dataread = BarcodeReader(image)
+    os.remove(image)
     return jsonify(dataread)
 
 @app.route('/predict', methods=['GET'])
