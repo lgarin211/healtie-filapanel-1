@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="assets/css/Sign-Up-Form---Gabriela-Carvalho.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     @yield('addtohead')
-
-    @vite([])
 </head>
 
 <body @yield('dotstylebody')>
